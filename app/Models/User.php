@@ -30,6 +30,11 @@ class User extends Authenticatable  implements JWTSubject
         return $this->hasMany(Formation::class);
     }
 
+    public function candidatures()
+    {
+        return $this->hasMany(Candidature::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
