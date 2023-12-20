@@ -11,7 +11,7 @@ class UpdateFormationRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class UpdateFormationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'libele' => ['required', 'string', 'max:30'],
+            'description' => ['required', 'string'],
+            'duree' => ['required', 'string'],
         ];
     }
 }
