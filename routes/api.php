@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ApiController;
 use App\Http\Controllers\Api\FormationController;
-use App\Http\Controllers\CandidatureController;
+use App\Http\Controllers\Api\CandidatureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,18 +40,6 @@ Route::get('/voirFormation/{formation}', [FormationController::class, 'show']);
 Route::patch('/modifierFormation/{formation}', [FormationController::class, 'update']);
 Route::patch('/supprimerFormation/{formation}', [FormationController::class, 'destroy']);
 
-
-
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

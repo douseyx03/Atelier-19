@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Requests\StoreCandidatureRequest;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateCandidatureRequest;
 use App\Models\Candidature;
 use Tymon\JWTAuth\Contracts\Providers\Auth;
